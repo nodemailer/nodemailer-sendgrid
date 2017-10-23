@@ -6,6 +6,10 @@ SendGrid transport object for Nodemailer.
 
 This module is mostly meant to demonstrate the usage of `mail.normalize(cb)` method in Nodemailer v4.3. This allows creating HTTP API based transports for Nodemailer much easier.
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/riRUvXLoy7hDEa8ptqPY9cHd/nodemailer/nodemailer-sendgrid'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/riRUvXLoy7hDEa8ptqPY9cHd/nodemailer/nodemailer-sendgrid.svg' />
+</a>
+
 ## Usage
 
 ### Install from NPM
