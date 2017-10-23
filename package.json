@@ -1,0 +1,20 @@
+{
+    "name": "nodemailer-sendgrid",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt"
+    },
+    "keywords": ["nodemailer", "sendgrid"],
+    "author": "Andris Reinman",
+    "license": "MIT",
+    "dependencies": {
+        "@sendgrid/mail": "^6.1.4"
+    },
+    "devDependencies": {
+        "eslint-config-nodemailer": "^1.2.0",
+        "grunt": "^1.0.1",
+        "grunt-eslint": "^20.1.0"
+    }
+}
