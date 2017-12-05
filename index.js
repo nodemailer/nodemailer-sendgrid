@@ -28,15 +28,18 @@ class SendGridTransport {
                         msg[key] = source[key];
                         break;
                     case 'from':
-                        msg.from = {
-                            name: source.from.name,
-                            email: source.from.address
-                        };
+                    case 'replyTo':
+                        msg[key] = []
+                            .concat(source[key] || [])
+                            .map(entry => ({
+                                name: entry.name,
+                                email: entry.address
+                            }))
+                            .shift();
                         break;
                     case 'to':
                     case 'cc':
                     case 'bcc':
-                    case 'replyTo':
                         msg[key] = [].concat(source[key] || []).map(entry => ({
                             name: entry.name,
                             email: entry.address
