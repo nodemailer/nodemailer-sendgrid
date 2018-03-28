@@ -55,7 +55,8 @@ class SendGridTransport {
                                     disposition: 'attachment'
                                 };
                                 if (entry.cid) {
-                                    attachment.contentId = entry.cid;
+                                    attachment.content_id = entry.cid;
+                                    attachment.disposition = 'inline';
                                 }
                                 return attachment;
                             });
