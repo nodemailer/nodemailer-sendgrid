@@ -25,6 +25,8 @@ class SendGridTransport {
                     case 'subject':
                     case 'text':
                     case 'html':
+                    case 'category':
+                    case 'categories':
                         msg[key] = source[key];
                         break;
                     case 'from':
