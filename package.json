@@ -6,6 +6,7 @@
     "scripts": {
         "test": "grunt"
     },
+    "typings": "types.d.ts",
     "keywords": ["nodemailer", "sendgrid"],
     "author": "Andris Reinman",
     "license": "MIT",
