@@ -68,7 +68,7 @@ class SendGridTransport {
                         {
                             let alternatives = source.alternatives.map(entry => {
                                 let alternative = {
-                                    content: entry.content,
+                                    value: entry.content,
                                     type: entry.contentType
                                 };
                                 return alternative;
@@ -91,7 +91,7 @@ class SendGridTransport {
                     case 'watchHtml':
                         {
                             let alternative = {
-                                content: source.watchHtml,
+                                value: source.watchHtml,
                                 type: 'text/watch-html'
                             };
                             msg.content = [].concat(msg.content || []).concat(alternative);
@@ -113,13 +113,13 @@ class SendGridTransport {
             });
 
             if (msg.content && msg.content.length) {
-                if (msg.text) {
-                    msg.content.unshift({ type: 'text/plain', content: msg.text });
-                    delete msg.text;
-                }
                 if (msg.html) {
-                    msg.content.unshift({ type: 'text/html', content: msg.html });
+                    msg.content.unshift({ type: 'text/html', value: msg.html });
                     delete msg.html;
+                }
+                if (msg.text) {
+                    msg.content.unshift({ type: 'text/plain', value: msg.text });
+                    delete msg.text;
                 }
             }
 
