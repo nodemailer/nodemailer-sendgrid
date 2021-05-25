@@ -1,15 +1,16 @@
 'use strict';
 
 const packageData = require('./package.json');
-const sgMail = require('@sendgrid/mail');
+const { MailService } = require('@sendgrid/mail');
 
 class SendGridTransport {
     constructor(options) {
         this.options = options || {};
         this.name = packageData.name;
         this.version = packageData.version;
+        this.sgMail = new MailService();
         if (options.apiKey) {
-            sgMail.setApiKey(options.apiKey);
+            this.sgMail.setApiKey(options.apiKey);
         }
     }
 
@@ -123,7 +124,7 @@ class SendGridTransport {
                 }
             }
 
-            sgMail.send(msg, callback);
+            this.sgMail.send(msg, callback);
         });
     }
 }
