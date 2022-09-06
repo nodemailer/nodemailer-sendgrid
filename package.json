@@ -6,16 +6,19 @@
     "scripts": {
         "test": "grunt"
     },
-    "keywords": ["nodemailer", "sendgrid"],
+    "keywords": [
+        "nodemailer",
+        "sendgrid"
+    ],
     "author": "Andris Reinman",
     "license": "MIT",
     "dependencies": {
-        "@sendgrid/mail": "^6.2.1"
+        "@sendgrid/mail": "^7.7.0"
     },
     "devDependencies": {
         "eslint-config-nodemailer": "^1.2.0",
         "grunt": "^1.0.2",
         "grunt-eslint": "^20.1.0",
-        "nodemailer": "^4.6.3"
+        "nodemailer": "^6.7.8"
     }
 }
